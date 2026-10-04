@@ -1,0 +1,12 @@
+staging/
+dist/
+dist-test/
+installer-test/
+bin/
+obj/
+*.zip
+*.exe
+*.msi
+*.log
+*.user
+*.suo
