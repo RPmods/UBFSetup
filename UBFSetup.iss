@@ -1,5 +1,5 @@
 #ifndef SetupVersion
-  #define SetupVersion "1.0.3"
+  #define SetupVersion "1.0.4"
 #endif
 
 #ifndef SetupAppId
