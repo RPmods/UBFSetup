@@ -1,5 +1,5 @@
 #ifndef SetupVersion
-  #define SetupVersion "1.0.0"
+  #define SetupVersion "1.0.1"
 #endif
 
 #ifndef SetupAppId
@@ -18,12 +18,15 @@
   #define SetupOutputName "UBFSetup"
 #endif
 
-#define LauncherPayload "staging\launcher"
+#ifndef LauncherPayload
+  #define LauncherPayload "staging\launcher"
+#endif
 
 [Setup]
 AppId={#SetupAppId}
 AppName={#SetupAppName}
 AppVersion={#SetupVersion}
+AppVerName={#SetupAppName} {#SetupVersion}
 AppPublisher=RPmods
 AppPublisherURL=https://github.com/RPmods
 AppSupportURL=https://github.com/RPmods/ubf-laucher
@@ -45,8 +48,12 @@ CloseApplications=yes
 RestartApplications=no
 Compression=lzma2/ultra64
 SolidCompression=yes
-WizardStyle=modern
-WizardSizePercent=105
+WizardStyle=modern dynamic
+WizardSizePercent=100
+WizardKeepAspectRatio=yes
+WizardImageFile=assets\wizard-panel.png
+WizardSmallImageFile=assets\wizard-mark.png
+DisableReadyPage=yes
 
 [Languages]
 Name: "spanish"; MessagesFile: "compiler:Languages\Spanish.isl"
